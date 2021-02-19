@@ -8,11 +8,11 @@ The method is oriented towards classical four-step transport modelling. Focus li
 ## Structure
 
 The directory structure is straight-forward:
-> quetzal_germany/
-> -- input/
-> -- input_static/
-> -- model/
-> -- output/
+> quetzal_germany/</br>
+> -- input/</br>
+> -- input_static/</br>
+> -- model/</br>
+> -- output/</br>
 
 While input and output data as well as (temporary) model files are stored in seperate folders, Jupyter Notebooks contain all data management and modelling. Briefly, they are structured as follows:
 * ``prep1X``: Generation of all transport networks in high resolution
@@ -30,13 +30,12 @@ While input and output data as well as (temporary) model files are stored in sep
 
 1. Create a virtual environment for quetzal models: Clone the quetzal package into a local folder and create a virtual environment as described here: https://github.com/systragroup/quetzal
 2. Clone this repository into a local folder: In your terminal, navigate to the position where you want to store the code. Type `git clone <this repo's URL>`. Navigate into the folder `quetzal_germany`.
-3. Download static input files from Zenodo[^1]:
-3.1. Download the whole data package into a folder named `input_static/` within the `quetzal_germany` repository
-3.2. Move the file `links.geojson` from `input_static/` to `model/de_pt_network_bus/`
-4. Activate your quetzal environment
-5. Open the local project in Jupyter Notebook (in your terminal type `jupyter notebook`) and start running the notebooks
+3. Download static input files from Zenodo *[1]* into a folder named `input_static/` within the `quetzal_germany` repository: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4518680.svg)](https://doi.org/10.5281/zenodo.4518680)
+4. Move the file `links.geojson` from `input_static/` to `model/de_pt_network_bus/`
+5. Activate your quetzal environment
+6. Open the local project in Jupyter Notebook (in your terminal type `jupyter notebook`) and start running the notebooks
 
-[^1]: If you wonder why these files are not hosted in this very repository: Large input data files require different handling and some of them also require a license different to this repo's licensing.
+*[1]*: If you wonder why these files are not hosted in this very repository: Large input data files require different handling and some of them also require a license different to this repo's licensing.
 
 ### First model run
 
