@@ -1,13 +1,13 @@
 %% This file is designed to be included into a LaTeX document
 %% See http://www.latex-project.org/ for information about LaTeX
-%% NL_Fz1 - Report from biogeme 3.2.6 [2021-06-25]
-%% biogeme 3.2.6 [2021-06-25]
+%% NL_Fz1 - Report from biogeme 3.2.6 [2021-07-09]
+%% biogeme 3.2.6 [2021-07-09]
 %% Version entirely written in Python
 %% Home page: http://biogeme.epfl.ch
 %% Submit questions to https://groups.google.com/d/forum/biogeme
 %% Michel Bierlaire, Transport and Mobility Laboratory, Ecole Polytechnique Fédérale de Lausanne (EPFL)
 
-%% This file has automatically been generated on 2021-06-25 14:42:24.919451</p>
+%% This file has automatically been generated on 2021-07-09 16:27:20.449666</p>
 
 %%Database name: MiD2017
 
@@ -18,23 +18,23 @@ Number of estimated parameters & 7 \\
 Sample size & 22969 \\
 Excluded observations & 62527 \\
 Init log likelihood & -44602.81 \\
-Final log likelihood & -10121.06 \\
-Likelihood ratio test for the init. model & 68963.51 \\
-Rho-square for the init. model & 0.773 \\
-Rho-square-bar for the init. model & 0.773 \\
-Akaike Information Criterion & 20256.11 \\
-Bayesian Information Criterion & 20312.41 \\
-Final gradient norm & 9.5072E-02 \\
+Final log likelihood & -9232.317 \\
+Likelihood ratio test for the init. model & 70740.99 \\
+Rho-square for the init. model & 0.793 \\
+Rho-square-bar for the init. model & 0.793 \\
+Akaike Information Criterion & 18478.63 \\
+Bayesian Information Criterion & 18534.93 \\
+Final gradient norm & 1.0939E-01 \\
 Nbr of threads & 8 \\
 Algorithm & \verb$BFGS with trust region for simple bound constraints$ \\
 Proportion analytical hessian & \verb$0.0%$ \\
-Relative projected gradient & \verb$4.684468e-06$ \\
-Number of iterations & \verb$60$ \\
-Number of function evaluations & \verb$179$ \\
-Number of gradient evaluations & \verb$60$ \\
+Relative projected gradient & \verb$1.167377e-05$ \\
+Number of iterations & \verb$1000$ \\
+Number of function evaluations & \verb$2999$ \\
+Number of gradient evaluations & \verb$1000$ \\
 Number of hessian evaluations & \verb$0$ \\
-Cause of termination & \verb$Relative gradient = 4.7e-06 <= 6.1e-06$ \\
-Optimization time & \verb$0:01:15.877907$ \\
+Cause of termination & \verb$Maximum number of iterations reached: 1000$ \\
+Optimization time & \verb$0:17:06.882372$ \\
 \end{tabular}
 
 %%Parameter estimates
@@ -43,13 +43,13 @@ Optimization time & \verb$0:01:15.877907$ \\
 \toprule
 {} &  Value &  Std err &  t-test &  p-value &  Rob. Std err &  Rob. t-test &  Rob. p-value \\
 \midrule
-asc\_air       &  -5.81 &     1.28 &   -4.54 & 5.65e-06 &          1.76 &        -3.29 &         0.001 \\
-asc\_bus       &  -2.89 &    0.055 &   -52.5 &      0.0 &        0.0687 &        -42.1 &           0.0 \\
-asc\_coach     &  -4.31 &    0.185 &   -23.4 &      0.0 &         0.201 &        -21.5 &           0.0 \\
-asc\_non\_motor &  -3.85 &   0.0905 &   -42.6 &      0.0 &        0.0984 &        -39.2 &           0.0 \\
-asc\_rail      &  -1.72 &   0.0308 &   -55.9 &      0.0 &        0.0322 &        -53.5 &           0.0 \\
-b\_gc          & -0.569 &   0.0214 &   -26.6 &      0.0 &        0.0333 &        -17.1 &           0.0 \\
-mu\_pt         &   1.28 &   0.0477 &    26.8 &      0.0 &        0.0591 &         21.7 &           0.0 \\
+asc\_air       &  -8.12 &      1.7 &   -4.77 &  1.8e-06 &          3.53 &         -2.3 &        0.0213 \\
+asc\_bus       &  -2.15 &   0.0429 &   -50.0 &      0.0 &        0.0473 &        -45.4 &           0.0 \\
+asc\_coach     &   -4.3 &    0.165 &   -26.0 &      0.0 &         0.178 &        -24.1 &           0.0 \\
+asc\_non\_motor &  -4.47 &    0.111 &   -40.1 &      0.0 &         0.139 &        -32.2 &           0.0 \\
+asc\_rail      &  -1.55 &   0.0307 &   -50.5 &      0.0 &        0.0319 &        -48.6 &           0.0 \\
+b\_gc          & -0.848 &   0.0254 &   -33.3 &      0.0 &        0.0411 &        -20.6 &           0.0 \\
+mu\_pt         &   1.59 &    0.065 &    24.5 &      0.0 &        0.0735 &         21.7 &           0.0 \\
 \bottomrule
 \end{tabular}
 
@@ -59,39 +59,39 @@ mu\_pt         &   1.28 &   0.0477 &    26.8 &      0.0 &        0.0591 &       
 \toprule
 {} &  Covariance &  Correlation &  t-test &  p-value &  Rob. cov. &  Rob. corr. &  Rob. t-test &  Rob. p-value \\
 \midrule
-asc\_bus-asc\_air         &       0.005 &        0.071 &    2.29 &   0.0222 &    0.00844 &      0.0697 &         1.66 &        0.0974 \\
-asc\_coach-asc\_air       &     0.00904 &       0.0383 &    1.16 &    0.245 &     0.0171 &      0.0482 &        0.846 &         0.398 \\
-asc\_coach-asc\_bus       &     0.00403 &        0.397 &   -8.36 &      0.0 &    0.00789 &       0.572 &        -8.32 &           0.0 \\
-asc\_non\_motor-asc\_air   &     0.00562 &       0.0486 &    1.53 &    0.126 &    0.00884 &      0.0509 &         1.11 &         0.268 \\
-asc\_non\_motor-asc\_bus   &     0.00137 &        0.276 &   -10.5 &      0.0 &     0.0024 &       0.355 &        -9.86 &           0.0 \\
-asc\_non\_motor-asc\_coach &     0.00247 &        0.148 &    2.37 &   0.0176 &    0.00461 &       0.233 &         2.27 &        0.0232 \\
-asc\_rail-asc\_air        &    0.000325 &      0.00824 &    3.19 &  0.00141 &  -0.000313 &    -0.00551 &         2.31 &        0.0207 \\
-asc\_rail-asc\_bus        &    0.000724 &        0.427 &    23.2 &      0.0 &   0.000872 &       0.395 &         18.4 &           0.0 \\
-asc\_rail-asc\_coach      &     0.00179 &        0.315 &    14.6 &      0.0 &    0.00242 &       0.374 &         13.5 &           0.0 \\
-asc\_rail-asc\_non\_motor  &    0.000145 &       0.0519 &    22.7 &      0.0 &  -5.41e-05 &     -0.0171 &         20.5 &           0.0 \\
-b\_gc-asc\_air            &     0.00325 &        0.118 &     4.1 &  4.1e-05 &    0.00617 &       0.105 &         2.97 &       0.00295 \\
-b\_gc-asc\_bus            &    0.000695 &         0.59 &    50.6 &      0.0 &    0.00151 &        0.66 &         43.8 &           0.0 \\
-b\_gc-asc\_coach          &     0.00126 &        0.318 &    20.9 &      0.0 &    0.00291 &       0.436 &         19.8 &           0.0 \\
-b\_gc-asc\_non\_motor      &    0.000794 &        0.409 &    39.1 &      0.0 &    0.00165 &       0.504 &         38.0 &           0.0 \\
-b\_gc-asc\_rail           &    2.78e-05 &       0.0422 &    31.3 &      0.0 &  -6.79e-05 &     -0.0634 &         24.1 &           0.0 \\
-mu\_pt-asc\_air           &     0.00479 &       0.0786 &    5.55 & 2.83e-08 &    0.00764 &      0.0733 &         4.02 &      5.75e-05 \\
-mu\_pt-asc\_bus           &     0.00188 &        0.717 &   106.0 &      0.0 &     0.0033 &       0.814 &        104.0 &           0.0 \\
-mu\_pt-asc\_coach         &     0.00457 &        0.519 &    33.9 &      0.0 &    0.00804 &       0.677 &         33.5 &           0.0 \\
-mu\_pt-asc\_non\_motor     &     0.00124 &        0.287 &    57.4 &      0.0 &    0.00214 &       0.368 &         54.4 &           0.0 \\
-mu\_pt-asc\_rail          &    0.000743 &        0.506 &    72.1 &      0.0 &   0.000852 &       0.448 &         56.5 &           0.0 \\
-mu\_pt-b\_gc              &    0.000673 &        0.658 &    49.7 &      0.0 &    0.00139 &       0.708 &         43.4 &           0.0 \\
+asc\_bus-asc\_air         &     0.00314 &       0.0431 &    3.52 & 0.000439 &    0.00575 &      0.0345 &          1.7 &        0.0901 \\
+asc\_coach-asc\_air       &     0.00968 &       0.0344 &    2.24 &   0.0248 &      0.016 &      0.0255 &         1.08 &         0.278 \\
+asc\_coach-asc\_bus       &     0.00184 &        0.258 &   -13.5 &      0.0 &    0.00209 &       0.249 &        -12.5 &           0.0 \\
+asc\_non\_motor-asc\_air   &      0.0106 &        0.056 &    2.15 &   0.0314 &     0.0144 &      0.0294 &         1.04 &           0.3 \\
+asc\_non\_motor-asc\_bus   &    0.000904 &        0.189 &   -20.8 &      0.0 &     0.0017 &        0.26 &        -17.3 &           0.0 \\
+asc\_non\_motor-asc\_coach &     0.00274 &        0.148 &  -0.906 &    0.365 &    0.00448 &       0.181 &       -0.819 &         0.413 \\
+asc\_rail-asc\_air        &   -0.000472 &     -0.00902 &    3.86 & 0.000113 &   -0.00126 &     -0.0112 &         1.86 &        0.0625 \\
+asc\_rail-asc\_bus        &    0.000583 &        0.442 &    14.8 &      0.0 &   0.000521 &       0.345 &         12.6 &           0.0 \\
+asc\_rail-asc\_coach      &     0.00113 &        0.223 &    17.0 &      0.0 &   0.000294 &      0.0517 &         15.3 &           0.0 \\
+asc\_rail-asc\_non\_motor  &    -5.6e-05 &      -0.0163 &    25.1 &      0.0 &   -0.00046 &      -0.104 &         20.0 &           0.0 \\
+b\_gc-asc\_air            &     0.00516 &        0.119 &    4.28 & 1.84e-05 &     0.0094 &      0.0648 &         2.06 &         0.039 \\
+b\_gc-asc\_bus            &    0.000389 &        0.356 &    31.4 &      0.0 &   0.000973 &         0.5 &         29.2 &           0.0 \\
+b\_gc-asc\_coach          &      0.0012 &        0.286 &    21.6 &      0.0 &    0.00259 &       0.354 &         20.5 &           0.0 \\
+b\_gc-asc\_non\_motor      &     0.00133 &         0.47 &    35.5 &      0.0 &    0.00285 &         0.5 &         29.3 &           0.0 \\
+b\_gc-asc\_rail           &    -6.9e-05 &      -0.0882 &    16.9 &      0.0 &  -0.000281 &      -0.214 &         12.3 &           0.0 \\
+mu\_pt-asc\_air           &     0.00596 &        0.054 &    5.72 & 1.07e-08 &     0.0093 &      0.0359 &         2.76 &       0.00584 \\
+mu\_pt-asc\_bus           &     0.00153 &         0.55 &    68.3 &      0.0 &    0.00222 &       0.638 &         66.1 &           0.0 \\
+mu\_pt-asc\_coach         &     0.00397 &        0.369 &    38.3 &      0.0 &    0.00343 &       0.263 &         33.9 &           0.0 \\
+mu\_pt-asc\_non\_motor     &     0.00161 &        0.222 &    52.3 &      0.0 &     0.0027 &       0.265 &         43.7 &           0.0 \\
+mu\_pt-asc\_rail          &     0.00102 &        0.511 &    56.3 &      0.0 &    0.00103 &       0.438 &         47.7 &           0.0 \\
+mu\_pt-b\_gc              &    0.000745 &        0.451 &    42.0 &      0.0 &    0.00162 &       0.537 &         39.4 &           0.0 \\
 \bottomrule
 \end{tabular}
 %% This file is designed to be included into a LaTeX document
 %% See http://www.latex-project.org/ for information about LaTeX
-%% NL_Fz2 - Report from biogeme 3.2.6 [2021-06-25]
-%% biogeme 3.2.6 [2021-06-25]
+%% NL_Fz2 - Report from biogeme 3.2.6 [2021-07-09]
+%% biogeme 3.2.6 [2021-07-09]
 %% Version entirely written in Python
 %% Home page: http://biogeme.epfl.ch
 %% Submit questions to https://groups.google.com/d/forum/biogeme
 %% Michel Bierlaire, Transport and Mobility Laboratory, Ecole Polytechnique Fédérale de Lausanne (EPFL)
 
-%% This file has automatically been generated on 2021-06-25 14:42:25.109362</p>
+%% This file has automatically been generated on 2021-07-09 16:27:20.549814</p>
 
 %%Database name: MiD2017
 
@@ -102,23 +102,23 @@ Number of estimated parameters & 7 \\
 Sample size & 3693 \\
 Excluded observations & 81803 \\
 Init log likelihood & -7168.673 \\
-Final log likelihood & -3591.36 \\
-Likelihood ratio test for the init. model & 7154.627 \\
-Rho-square for the init. model & 0.499 \\
-Rho-square-bar for the init. model & 0.498 \\
-Akaike Information Criterion & 7196.72 \\
-Bayesian Information Criterion & 7240.219 \\
-Final gradient norm & 3.7357E-02 \\
+Final log likelihood & -3058.678 \\
+Likelihood ratio test for the init. model & 8219.99 \\
+Rho-square for the init. model & 0.573 \\
+Rho-square-bar for the init. model & 0.572 \\
+Akaike Information Criterion & 6131.356 \\
+Bayesian Information Criterion & 6174.855 \\
+Final gradient norm & 2.2930E-02 \\
 Nbr of threads & 8 \\
 Algorithm & \verb$BFGS with trust region for simple bound constraints$ \\
 Proportion analytical hessian & \verb$0.0%$ \\
-Relative projected gradient & \verb$4.820478e-06$ \\
-Number of iterations & \verb$51$ \\
-Number of function evaluations & \verb$150$ \\
-Number of gradient evaluations & \verb$50$ \\
+Relative projected gradient & \verb$3.961101e-06$ \\
+Number of iterations & \verb$54$ \\
+Number of function evaluations & \verb$159$ \\
+Number of gradient evaluations & \verb$53$ \\
 Number of hessian evaluations & \verb$0$ \\
-Cause of termination & \verb$Relative gradient = 4.8e-06 <= 6.1e-06$ \\
-Optimization time & \verb$0:00:08.866910$ \\
+Cause of termination & \verb$Relative gradient = 4e-06 <= 6.1e-06$ \\
+Optimization time & \verb$0:00:09.339693$ \\
 \end{tabular}
 
 %%Parameter estimates
@@ -127,13 +127,13 @@ Optimization time & \verb$0:00:08.866910$ \\
 \toprule
 {} &  Value &  Std err &  t-test &  p-value &  Rob. Std err &  Rob. t-test &  Rob. p-value \\
 \midrule
-asc\_air       &  -4.74 &     12.6 &  -0.376 &    0.707 &         0.369 &        -12.8 &           0.0 \\
-asc\_bus       &  0.167 &   0.0474 &    3.52 & 0.000436 &        0.0476 &         3.51 &      0.000453 \\
-asc\_coach     & -0.835 &    0.152 &   -5.48 & 4.37e-08 &         0.154 &        -5.41 &      6.44e-08 \\
-asc\_non\_motor &   -1.5 &   0.0971 &   -15.5 &      0.0 &        0.0856 &        -17.6 &           0.0 \\
-asc\_rail      &  0.206 &   0.0522 &    3.95 &  7.9e-05 &        0.0513 &         4.02 &      5.86e-05 \\
-b\_gc          & -0.458 &   0.0288 &   -15.9 &      0.0 &         0.037 &        -12.4 &           0.0 \\
-mu\_pt         &   2.02 &    0.142 &    14.2 &      0.0 &         0.148 &         13.7 &           0.0 \\
+asc\_air       &  -3.62 &     11.3 &   -0.32 &    0.749 &         0.425 &        -8.52 &           0.0 \\
+asc\_bus       &   0.44 &   0.0528 &    8.33 &      0.0 &        0.0534 &         8.24 &      2.22e-16 \\
+asc\_coach     &  -1.93 &    0.232 &   -8.34 &      0.0 &         0.232 &        -8.32 &           0.0 \\
+asc\_non\_motor &  -2.16 &     0.12 &   -18.0 &      0.0 &         0.109 &        -19.9 &           0.0 \\
+asc\_rail      &   -0.2 &   0.0759 &   -2.63 &  0.00842 &        0.0741 &         -2.7 &       0.00697 \\
+b\_gc          & -0.779 &   0.0383 &   -20.3 &      0.0 &        0.0488 &        -16.0 &           0.0 \\
+mu\_pt         &   1.35 &   0.0968 &    14.0 &      0.0 &        0.0938 &         14.4 &           0.0 \\
 \bottomrule
 \end{tabular}
 
@@ -143,39 +143,39 @@ mu\_pt         &   2.02 &    0.142 &    14.2 &      0.0 &         0.148 &       
 \toprule
 {} &  Covariance &  Correlation &  t-test &  p-value &  Rob. cov. &  Rob. corr. &  Rob. t-test &  Rob. p-value \\
 \midrule
-asc\_bus-asc\_air         &    -0.00132 &     -0.00221 &   0.389 &    0.697 &  -0.000488 &     -0.0278 &         13.1 &           0.0 \\
-asc\_coach-asc\_air       &    -0.00677 &     -0.00352 &    0.31 &    0.757 &   -0.00433 &     -0.0759 &         9.51 &           0.0 \\
-asc\_coach-asc\_bus       &     0.00338 &        0.468 &   -7.32 & 2.51e-13 &     0.0035 &       0.476 &        -7.25 &      4.31e-13 \\
-asc\_non\_motor-asc\_air   &    -0.00568 &     -0.00464 &   0.257 &    0.797 &   -0.00566 &      -0.179 &         8.23 &      2.22e-16 \\
-asc\_non\_motor-asc\_bus   &     0.00117 &        0.255 &   -17.3 &      0.0 &   0.000326 &      0.0801 &        -17.7 &           0.0 \\
-asc\_non\_motor-asc\_coach &     0.00293 &        0.198 &   -4.08 & 4.51e-05 &   0.000772 &      0.0584 &        -3.88 &      0.000104 \\
-asc\_rail-asc\_air        &   -0.000444 &    -0.000673 &   0.392 &    0.695 &    0.00143 &      0.0754 &         13.4 &           0.0 \\
-asc\_rail-asc\_bus        &     0.00189 &        0.763 &    1.14 &    0.254 &    0.00185 &       0.758 &         1.14 &         0.253 \\
-asc\_rail-asc\_coach      &     0.00426 &        0.535 &    7.88 & 3.33e-15 &    0.00439 &       0.554 &         7.83 &      5.11e-15 \\
-asc\_rail-asc\_non\_motor  &    0.000897 &        0.177 &    16.8 &      0.0 &  -0.000142 &     -0.0323 &         16.9 &           0.0 \\
-b\_gc-asc\_air            &    -0.00406 &      -0.0112 &    0.34 &    0.734 &   -0.00642 &      -0.471 &         11.0 &           0.0 \\
-b\_gc-asc\_bus            &    0.000429 &        0.314 &   -13.3 &      0.0 &   0.000352 &         0.2 &        -11.6 &           0.0 \\
-b\_gc-asc\_coach          &     0.00155 &        0.352 &     2.6 &  0.00933 &    0.00123 &       0.215 &          2.5 &        0.0125 \\
-b\_gc-asc\_non\_motor      &     0.00121 &        0.432 &    11.8 &      0.0 &    0.00126 &       0.399 &         13.3 &           0.0 \\
-b\_gc-asc\_rail           &    0.000232 &        0.154 &   -11.9 &      0.0 &  -8.91e-05 &      -0.047 &        -10.3 &           0.0 \\
-mu\_pt-asc\_air           &     -0.0118 &     -0.00656 &   0.536 &    0.592 &    -0.0108 &      -0.198 &         15.9 &           0.0 \\
-mu\_pt-asc\_bus           &     0.00285 &        0.423 &    14.3 &      0.0 &     0.0027 &       0.385 &         13.6 &           0.0 \\
-mu\_pt-asc\_coach         &      0.0142 &        0.653 &    23.2 &      0.0 &     0.0158 &       0.694 &         24.1 &           0.0 \\
-mu\_pt-asc\_non\_motor     &     0.00383 &        0.277 &    23.7 &      0.0 &    0.00171 &       0.135 &         22.0 &           0.0 \\
-mu\_pt-asc\_rail          &     0.00394 &        0.531 &    14.8 &      0.0 &    0.00356 &        0.47 &         13.8 &           0.0 \\
-mu\_pt-b\_gc              &     0.00246 &        0.599 &    19.5 &      0.0 &    0.00244 &       0.448 &         18.3 &           0.0 \\
+asc\_bus-asc\_air         &   -0.000855 &     -0.00143 &   0.359 &    0.719 &   -0.00159 &     -0.0701 &          9.4 &           0.0 \\
+asc\_coach-asc\_air       &    -0.00784 &       -0.003 &   0.149 &    0.881 &   -0.00989 &        -0.1 &         3.34 &      0.000824 \\
+asc\_coach-asc\_bus       &    0.000559 &       0.0457 &   -10.1 &      0.0 &   0.000302 &      0.0244 &        -10.0 &           0.0 \\
+asc\_non\_motor-asc\_air   &    -0.00869 &     -0.00643 &   0.129 &    0.897 &   -0.00755 &      -0.164 &          3.2 &       0.00136 \\
+asc\_non\_motor-asc\_bus   &    0.000934 &        0.148 &   -21.1 &      0.0 &   0.000477 &      0.0822 &        -22.2 &           0.0 \\
+asc\_non\_motor-asc\_coach &     0.00399 &        0.144 &  -0.929 &    0.353 &    0.00253 &         0.1 &       -0.924 &         0.355 \\
+asc\_rail-asc\_air        &    -0.00115 &     -0.00134 &   0.303 &    0.762 &  -0.000723 &      -0.023 &          7.9 &      2.89e-15 \\
+asc\_rail-asc\_bus        &    0.000857 &        0.214 &   -7.74 & 9.77e-15 &   0.000674 &        0.17 &        -7.65 &      1.95e-14 \\
+asc\_rail-asc\_coach      &      0.0105 &        0.596 &    8.83 &      0.0 &     0.0103 &       0.598 &         8.79 &           0.0 \\
+asc\_rail-asc\_non\_motor  &     0.00125 &        0.138 &    14.8 &      0.0 &   0.000464 &      0.0577 &         15.3 &           0.0 \\
+b\_gc-asc\_air            &    -0.00593 &      -0.0137 &   0.251 &    0.802 &   -0.00937 &      -0.453 &         6.32 &      2.54e-10 \\
+b\_gc-asc\_bus            &    0.000284 &         0.14 &   -20.1 &      0.0 &   0.000485 &       0.187 &        -18.7 &           0.0 \\
+b\_gc-asc\_coach          &      0.0021 &        0.236 &    5.11 & 3.26e-07 &    0.00274 &       0.242 &         5.11 &      3.15e-07 \\
+b\_gc-asc\_non\_motor      &     0.00218 &        0.475 &    12.9 &      0.0 &    0.00196 &       0.371 &         13.6 &           0.0 \\
+b\_gc-asc\_rail           &    0.000403 &        0.138 &   -7.22 &  5.1e-13 &   0.000342 &      0.0946 &        -6.83 &      8.56e-12 \\
+mu\_pt-asc\_air           &    -0.00466 &     -0.00426 &    0.44 &     0.66 &   -0.00575 &      -0.144 &         11.1 &           0.0 \\
+mu\_pt-asc\_bus           &   -0.000392 &      -0.0767 &    8.04 & 8.88e-16 &  -0.000591 &      -0.118 &         8.07 &      6.66e-16 \\
+mu\_pt-asc\_coach         &      0.0151 &        0.671 &    18.1 &      0.0 &     0.0147 &       0.674 &         18.0 &           0.0 \\
+mu\_pt-asc\_non\_motor     &       0.002 &        0.173 &    25.0 &      0.0 &    0.00136 &       0.134 &         26.3 &           0.0 \\
+mu\_pt-asc\_rail          &     0.00565 &        0.769 &    25.1 &      0.0 &    0.00517 &       0.744 &         24.7 &           0.0 \\
+mu\_pt-b\_gc              &      0.0012 &        0.324 &    23.2 &      0.0 &    0.00153 &       0.333 &         23.7 &           0.0 \\
 \bottomrule
 \end{tabular}
 %% This file is designed to be included into a LaTeX document
 %% See http://www.latex-project.org/ for information about LaTeX
-%% NL_Fz3 - Report from biogeme 3.2.6 [2021-06-25]
-%% biogeme 3.2.6 [2021-06-25]
+%% NL_Fz3 - Report from biogeme 3.2.6 [2021-07-09]
+%% biogeme 3.2.6 [2021-07-09]
 %% Version entirely written in Python
 %% Home page: http://biogeme.epfl.ch
 %% Submit questions to https://groups.google.com/d/forum/biogeme
 %% Michel Bierlaire, Transport and Mobility Laboratory, Ecole Polytechnique Fédérale de Lausanne (EPFL)
 
-%% This file has automatically been generated on 2021-06-25 14:42:25.241212</p>
+%% This file has automatically been generated on 2021-07-09 16:27:20.596640</p>
 
 %%Database name: MiD2017
 
@@ -186,23 +186,23 @@ Number of estimated parameters & 7 \\
 Sample size & 21276 \\
 Excluded observations & 64220 \\
 Init log likelihood & -41323.03 \\
-Final log likelihood & -6266.723 \\
-Likelihood ratio test for the init. model & 70112.61 \\
-Rho-square for the init. model & 0.848 \\
-Rho-square-bar for the init. model & 0.848 \\
-Akaike Information Criterion & 12547.45 \\
-Bayesian Information Criterion & 12603.2 \\
-Final gradient norm & 2.6612E-01 \\
+Final log likelihood & -5763.322 \\
+Likelihood ratio test for the init. model & 71119.42 \\
+Rho-square for the init. model & 0.861 \\
+Rho-square-bar for the init. model & 0.86 \\
+Akaike Information Criterion & 11540.64 \\
+Bayesian Information Criterion & 11596.4 \\
+Final gradient norm & 6.2331E-02 \\
 Nbr of threads & 8 \\
 Algorithm & \verb$BFGS with trust region for simple bound constraints$ \\
 Proportion analytical hessian & \verb$0.0%$ \\
-Relative projected gradient & \verb$5.886682e-06$ \\
-Number of iterations & \verb$61$ \\
-Number of function evaluations & \verb$182$ \\
-Number of gradient evaluations & \verb$61$ \\
+Relative projected gradient & \verb$7.320276e-06$ \\
+Number of iterations & \verb$1000$ \\
+Number of function evaluations & \verb$2999$ \\
+Number of gradient evaluations & \verb$1000$ \\
 Number of hessian evaluations & \verb$0$ \\
-Cause of termination & \verb$Relative gradient = 5.9e-06 <= 6.1e-06$ \\
-Optimization time & \verb$0:01:10.510126$ \\
+Cause of termination & \verb$Maximum number of iterations reached: 1000$ \\
+Optimization time & \verb$0:16:55.431523$ \\
 \end{tabular}
 
 %%Parameter estimates
@@ -211,13 +211,13 @@ Optimization time & \verb$0:01:10.510126$ \\
 \toprule
 {} &  Value &  Std err &  t-test &  p-value &  Rob. Std err &  Rob. t-test &  Rob. p-value \\
 \midrule
-asc\_air       &  -5.84 &      1.5 &   -3.89 & 9.92e-05 &          2.33 &         -2.5 &        0.0123 \\
-asc\_bus       &  -3.23 &   0.0542 &   -59.5 &      0.0 &        0.0596 &        -54.1 &           0.0 \\
-asc\_coach     &  -4.99 &     0.27 &   -18.5 &      0.0 &         0.278 &        -17.9 &           0.0 \\
-asc\_non\_motor &  -2.62 &   0.0587 &   -44.6 &      0.0 &        0.0558 &        -46.9 &           0.0 \\
-asc\_rail      &  -2.76 &   0.0476 &   -57.9 &      0.0 &        0.0497 &        -55.5 &           0.0 \\
-b\_gc          & -0.536 &    0.018 &   -29.7 &      0.0 &        0.0225 &        -23.8 &           0.0 \\
-mu\_pt         &   1.37 &   0.0628 &    21.9 &      0.0 &        0.0717 &         19.2 &           0.0 \\
+asc\_air       &  -6.61 &     1.48 &   -4.46 & 8.13e-06 &          2.17 &        -3.04 &       0.00237 \\
+asc\_bus       &   -2.5 &   0.0423 &   -59.1 &      0.0 &        0.0417 &        -60.0 &           0.0 \\
+asc\_coach     &  -4.55 &    0.212 &   -21.4 &      0.0 &         0.227 &        -20.1 &           0.0 \\
+asc\_non\_motor &  -2.89 &   0.0637 &   -45.3 &      0.0 &        0.0627 &        -46.0 &           0.0 \\
+asc\_rail      &  -2.56 &   0.0451 &   -56.8 &      0.0 &        0.0452 &        -56.7 &           0.0 \\
+b\_gc          & -0.645 &   0.0203 &   -31.7 &      0.0 &         0.028 &        -23.0 &           0.0 \\
+mu\_pt         &   2.24 &    0.147 &    15.2 &      0.0 &         0.144 &         15.6 &           0.0 \\
 \bottomrule
 \end{tabular}
 
@@ -227,39 +227,39 @@ mu\_pt         &   1.37 &   0.0628 &    21.9 &      0.0 &        0.0717 &       
 \toprule
 {} &  Covariance &  Correlation &  t-test &  p-value &  Rob. cov. &  Rob. corr. &  Rob. t-test &  Rob. p-value \\
 \midrule
-asc\_bus-asc\_air         &     0.00327 &       0.0402 &    1.74 &   0.0816 &    0.00399 &      0.0287 &         1.12 &         0.263 \\
-asc\_coach-asc\_air       &      0.0191 &       0.0473 &   0.563 &    0.574 &      0.073 &       0.112 &        0.367 &         0.714 \\
-asc\_coach-asc\_bus       &     0.00401 &        0.274 &   -6.76 & 1.34e-11 &    0.00689 &       0.415 &        -6.78 &       1.2e-11 \\
-asc\_non\_motor-asc\_air   &     0.00306 &       0.0347 &    2.15 &   0.0317 &    0.00141 &      0.0109 &         1.38 &         0.167 \\
-asc\_non\_motor-asc\_bus   &    0.000621 &        0.195 &    8.48 &      0.0 &   0.000291 &      0.0874 &          7.8 &       6e-15.0 \\
-asc\_non\_motor-asc\_coach &     0.00144 &       0.0911 &    8.75 &      0.0 &   0.000654 &      0.0421 &         8.41 &           0.0 \\
-asc\_rail-asc\_air        &      0.0022 &       0.0308 &    2.05 &   0.0399 &    0.00319 &      0.0275 &         1.32 &         0.186 \\
-asc\_rail-asc\_bus        &     0.00138 &        0.535 &     9.5 &      0.0 &    0.00185 &       0.623 &         9.73 &           0.0 \\
-asc\_rail-asc\_coach      &     0.00438 &        0.341 &    8.66 &      0.0 &    0.00663 &       0.479 &         8.63 &           0.0 \\
-asc\_rail-asc\_non\_motor  &    0.000361 &        0.129 &   -1.97 &    0.049 &    9.1e-05 &      0.0328 &        -1.89 &        0.0583 \\
-b\_gc-asc\_air            &      0.0023 &       0.0851 &    3.54 & 0.000402 &     0.0022 &      0.0419 &         2.27 &         0.023 \\
-b\_gc-asc\_bus            &    0.000378 &        0.386 &    53.7 &      0.0 &   0.000407 &       0.304 &         47.2 &           0.0 \\
-b\_gc-asc\_coach          &    0.000963 &        0.198 &    16.7 &      0.0 &    0.00117 &       0.187 &         16.2 &           0.0 \\
-b\_gc-asc\_non\_motor      &    0.000423 &        0.399 &    38.4 &      0.0 &   0.000445 &       0.355 &         39.9 &           0.0 \\
-b\_gc-asc\_rail           &     0.00018 &         0.21 &    47.0 &      0.0 &   0.000135 &       0.121 &         42.7 &           0.0 \\
-mu\_pt-asc\_air           &     0.00468 &       0.0497 &    4.82 & 1.47e-06 &    0.00703 &       0.042 &          3.1 &       0.00197 \\
-mu\_pt-asc\_bus           &     0.00185 &        0.543 &    81.5 &      0.0 &    0.00277 &       0.647 &         81.8 &           0.0 \\
-mu\_pt-asc\_coach         &     0.00749 &        0.442 &    25.6 &      0.0 &     0.0122 &        0.61 &         26.3 &           0.0 \\
-mu\_pt-asc\_non\_motor     &    0.000772 &        0.209 &    52.2 &      0.0 &     0.0004 &      0.0999 &         46.2 &           0.0 \\
-mu\_pt-asc\_rail          &       0.002 &         0.67 &    88.0 &      0.0 &    0.00251 &       0.704 &         81.1 &           0.0 \\
-mu\_pt-b\_gc              &    0.000554 &        0.488 &    34.0 &      0.0 &   0.000582 &       0.361 &         28.5 &           0.0 \\
+asc\_bus-asc\_air         &     0.00124 &       0.0198 &    2.77 &  0.00554 &    0.00164 &      0.0181 &         1.89 &        0.0589 \\
+asc\_coach-asc\_air       &      0.0228 &       0.0726 &    1.39 &    0.164 &      0.132 &       0.268 &         0.97 &         0.332 \\
+asc\_coach-asc\_bus       &      0.0012 &        0.134 &   -9.72 &      0.0 &   0.000689 &       0.073 &         -9.0 &           0.0 \\
+asc\_non\_motor-asc\_air   &     0.00417 &       0.0442 &    2.52 &   0.0119 &    0.00235 &      0.0173 &         1.71 &        0.0868 \\
+asc\_non\_motor-asc\_bus   &    0.000272 &        0.101 &   -5.27 & 1.33e-07 &   0.000168 &      0.0644 &        -5.26 &      1.43e-07 \\
+asc\_non\_motor-asc\_coach &     0.00144 &        0.106 &    7.74 & 1.02e-14 &    0.00063 &      0.0444 &         7.15 &       8.7e-13 \\
+asc\_rail-asc\_air        &     0.00155 &       0.0232 &    2.73 &  0.00628 &    0.00542 &      0.0552 &         1.86 &        0.0625 \\
+asc\_rail-asc\_bus        &    0.000903 &        0.473 &   -1.36 &    0.175 &   0.000877 &       0.466 &        -1.36 &         0.175 \\
+asc\_rail-asc\_coach      &     0.00254 &        0.265 &    9.69 &      0.0 &   0.000629 &      0.0614 &         8.69 &           0.0 \\
+asc\_rail-asc\_non\_motor  &    0.000267 &       0.0929 &    4.33 & 1.47e-05 &   0.000164 &      0.0581 &          4.3 &      1.69e-05 \\
+b\_gc-asc\_air            &     0.00295 &        0.098 &    4.03 & 5.54e-05 &    0.00306 &      0.0503 &         2.74 &       0.00607 \\
+b\_gc-asc\_bus            &    0.000114 &        0.132 &    41.8 &      0.0 &   0.000139 &       0.119 &         39.2 &           0.0 \\
+b\_gc-asc\_coach          &    0.000915 &        0.212 &    18.7 &      0.0 &    0.00104 &       0.163 &         17.4 &           0.0 \\
+b\_gc-asc\_non\_motor      &    0.000574 &        0.443 &    38.9 &      0.0 &   0.000797 &       0.455 &         40.1 &           0.0 \\
+b\_gc-asc\_rail           &    9.61e-05 &        0.105 &    40.3 &      0.0 &   0.000111 &      0.0876 &         37.6 &           0.0 \\
+mu\_pt-asc\_air           &     0.00825 &       0.0378 &    5.97 & 2.43e-09 &     0.0284 &       0.091 &         4.08 &      4.43e-05 \\
+mu\_pt-asc\_bus           &     0.00104 &        0.167 &    32.4 &      0.0 &   0.000964 &       0.161 &         33.2 &           0.0 \\
+mu\_pt-asc\_coach         &     0.00846 &        0.271 &    30.4 &      0.0 &   0.000792 &      0.0244 &         25.6 &           0.0 \\
+mu\_pt-asc\_non\_motor     &     0.00141 &         0.15 &    33.8 &      0.0 &     0.0014 &       0.155 &         34.7 &           0.0 \\
+mu\_pt-asc\_rail          &      0.0044 &        0.662 &    39.2 &      0.0 &    0.00422 &       0.651 &         40.3 &           0.0 \\
+mu\_pt-b\_gc              &    0.000927 &        0.309 &    20.2 &      0.0 &    0.00142 &       0.355 &         21.2 &           0.0 \\
 \bottomrule
 \end{tabular}
 %% This file is designed to be included into a LaTeX document
 %% See http://www.latex-project.org/ for information about LaTeX
-%% NL_Fz4 - Report from biogeme 3.2.6 [2021-06-25]
-%% biogeme 3.2.6 [2021-06-25]
+%% NL_Fz4 - Report from biogeme 3.2.6 [2021-07-09]
+%% biogeme 3.2.6 [2021-07-09]
 %% Version entirely written in Python
 %% Home page: http://biogeme.epfl.ch
 %% Submit questions to https://groups.google.com/d/forum/biogeme
 %% Michel Bierlaire, Transport and Mobility Laboratory, Ecole Polytechnique Fédérale de Lausanne (EPFL)
 
-%% This file has automatically been generated on 2021-06-25 14:42:25.352823</p>
+%% This file has automatically been generated on 2021-07-09 16:27:20.634469</p>
 
 %%Database name: MiD2017
 
@@ -270,23 +270,23 @@ Number of estimated parameters & 7 \\
 Sample size & 4923 \\
 Excluded observations & 80573 \\
 Init log likelihood & -9567.538 \\
-Final log likelihood & -1935.129 \\
-Likelihood ratio test for the init. model & 15264.82 \\
-Rho-square for the init. model & 0.798 \\
-Rho-square-bar for the init. model & 0.797 \\
-Akaike Information Criterion & 3884.258 \\
-Bayesian Information Criterion & 3929.769 \\
-Final gradient norm & 4.3806E-02 \\
+Final log likelihood & -1812.244 \\
+Likelihood ratio test for the init. model & 15510.59 \\
+Rho-square for the init. model & 0.811 \\
+Rho-square-bar for the init. model & 0.81 \\
+Akaike Information Criterion & 3638.488 \\
+Bayesian Information Criterion & 3683.999 \\
+Final gradient norm & 2.8513E-02 \\
 Nbr of threads & 8 \\
 Algorithm & \verb$BFGS with trust region for simple bound constraints$ \\
 Proportion analytical hessian & \verb$0.0%$ \\
-Relative projected gradient & \verb$5.404246e-06$ \\
-Number of iterations & \verb$51$ \\
-Number of function evaluations & \verb$152$ \\
-Number of gradient evaluations & \verb$51$ \\
+Relative projected gradient & \verb$4.278891e-06$ \\
+Number of iterations & \verb$52$ \\
+Number of function evaluations & \verb$155$ \\
+Number of gradient evaluations & \verb$52$ \\
 Number of hessian evaluations & \verb$0$ \\
-Cause of termination & \verb$Relative gradient = 5.4e-06 <= 6.1e-06$ \\
-Optimization time & \verb$0:00:14.440909$ \\
+Cause of termination & \verb$Relative gradient = 4.3e-06 <= 6.1e-06$ \\
+Optimization time & \verb$0:00:12.305202$ \\
 \end{tabular}
 
 %%Parameter estimates
@@ -295,13 +295,13 @@ Optimization time & \verb$0:00:14.440909$ \\
 \toprule
 {} &  Value &  Std err &  t-test &  p-value &  Rob. Std err &  Rob. t-test &  Rob. p-value \\
 \midrule
-asc\_air       &  -1.89 &    0.304 &    -6.2 & 5.81e-10 &         0.349 &         -5.4 &      6.64e-08 \\
-asc\_bus       &  -3.49 &    0.143 &   -24.3 &      0.0 &         0.147 &        -23.6 &           0.0 \\
-asc\_coach     &  -3.86 &    0.276 &   -14.0 &      0.0 &         0.283 &        -13.6 &           0.0 \\
-asc\_non\_motor &  -3.06 &    0.166 &   -18.4 &      0.0 &         0.168 &        -18.2 &           0.0 \\
-asc\_rail      &   -2.5 &    0.083 &   -30.1 &      0.0 &        0.0825 &        -30.3 &           0.0 \\
-b\_gc          &  -0.19 &   0.0164 &   -11.6 &      0.0 &        0.0204 &        -9.33 &           0.0 \\
-mu\_pt         &    1.5 &    0.165 &     9.1 &      0.0 &         0.169 &         8.87 &           0.0 \\
+asc\_air       &  -2.03 &    0.315 &   -6.43 & 1.26e-10 &         0.385 &        -5.27 &      1.36e-07 \\
+asc\_bus       &  -2.27 &   0.0816 &   -27.9 &      0.0 &        0.0784 &        -29.0 &           0.0 \\
+asc\_coach     &  -3.13 &    0.189 &   -16.5 &      0.0 &         0.186 &        -16.8 &           0.0 \\
+asc\_non\_motor &  -3.05 &    0.167 &   -18.2 &      0.0 &         0.159 &        -19.2 &           0.0 \\
+asc\_rail      &  -2.28 &   0.0732 &   -31.1 &      0.0 &        0.0756 &        -30.1 &           0.0 \\
+b\_gc          & -0.233 &   0.0199 &   -11.7 &      0.0 &        0.0286 &        -8.15 &      4.44e-16 \\
+mu\_pt         &   2.71 &     0.42 &    6.44 & 1.16e-10 &         0.444 &          6.1 &      1.08e-09 \\
 \bottomrule
 \end{tabular}
 
@@ -311,39 +311,39 @@ mu\_pt         &    1.5 &    0.165 &     9.1 &      0.0 &         0.169 &       
 \toprule
 {} &  Covariance &  Correlation &  t-test &  p-value &  Rob. cov. &  Rob. corr. &  Rob. t-test &  Rob. p-value \\
 \midrule
-asc\_bus-asc\_air         &     0.00194 &       0.0446 &   -4.84 & 1.27e-06 &     0.0107 &       0.208 &        -4.58 &      4.62e-06 \\
-asc\_coach-asc\_air       &     0.00244 &        0.029 &   -4.87 & 1.11e-06 &     0.0135 &       0.137 &        -4.72 &      2.41e-06 \\
-asc\_coach-asc\_bus       &      0.0234 &         0.59 &   -1.66 &   0.0973 &     0.0248 &       0.595 &        -1.62 &         0.105 \\
-asc\_non\_motor-asc\_air   &    0.000283 &      0.00559 &   -3.41 & 0.000651 &   -0.00181 &     -0.0308 &        -3.01 &       0.00263 \\
-asc\_non\_motor-asc\_bus   &   -0.000229 &      -0.0096 &    1.91 &   0.0563 &   -0.00545 &       -0.22 &         1.71 &        0.0879 \\
-asc\_non\_motor-asc\_coach &    -0.00041 &     -0.00892 &    2.45 &   0.0144 &   -0.00701 &      -0.147 &         2.26 &        0.0236 \\
-asc\_rail-asc\_air        &     0.00129 &        0.051 &   -1.96 &   0.0498 &    0.00349 &       0.121 &        -1.75 &          0.08 \\
-asc\_rail-asc\_bus        &     0.00792 &        0.665 &    9.19 &      0.0 &    0.00789 &       0.649 &         8.77 &           0.0 \\
-asc\_rail-asc\_coach      &      0.0142 &        0.619 &    5.82 & 5.87e-09 &      0.015 &       0.643 &         5.71 &      1.14e-08 \\
-asc\_rail-asc\_non\_motor  &    0.000191 &       0.0138 &    3.08 &  0.00209 &   -0.00155 &      -0.111 &         2.91 &       0.00361 \\
-b\_gc-asc\_air            &    0.000209 &       0.0419 &    5.58 & 2.47e-08 &    0.00195 &       0.275 &         4.93 &      8.34e-07 \\
-b\_gc-asc\_bus            &     0.00122 &        0.518 &    24.3 &      0.0 &    0.00208 &       0.691 &         24.6 &           0.0 \\
-b\_gc-asc\_coach          &     0.00157 &        0.347 &    13.5 &      0.0 &    0.00259 &       0.449 &         13.4 &           0.0 \\
-b\_gc-asc\_non\_motor      &   -0.000219 &      -0.0801 &    17.1 &      0.0 &   -0.00117 &      -0.341 &         16.3 &           0.0 \\
-b\_gc-asc\_rail           &    0.000332 &        0.244 &    28.6 &      0.0 &   0.000656 &       0.391 &         30.0 &           0.0 \\
-mu\_pt-asc\_air           &      0.0014 &        0.028 &     9.9 &      0.0 &      0.011 &       0.186 &         9.44 &           0.0 \\
-mu\_pt-asc\_bus           &      0.0177 &        0.749 &    45.0 &      0.0 &     0.0184 &       0.737 &         42.8 &           0.0 \\
-mu\_pt-asc\_coach         &      0.0334 &        0.734 &    28.0 &      0.0 &     0.0359 &       0.751 &         27.9 &           0.0 \\
-mu\_pt-asc\_non\_motor     &   -0.000682 &      -0.0249 &    19.3 &      0.0 &   -0.00646 &      -0.227 &         17.3 &           0.0 \\
-mu\_pt-asc\_rail          &     0.00997 &         0.73 &    33.7 &      0.0 &     0.0103 &       0.738 &         32.9 &           0.0 \\
-mu\_pt-b\_gc              &     0.00142 &        0.524 &    10.8 &      0.0 &    0.00235 &       0.681 &         10.8 &           0.0 \\
+asc\_bus-asc\_air         &     0.00127 &       0.0493 &  -0.758 &    0.448 &    0.00349 &       0.115 &       -0.636 &         0.525 \\
+asc\_coach-asc\_air       &     0.00349 &       0.0585 &   -3.07 &  0.00211 &     0.0142 &       0.198 &         -2.8 &       0.00509 \\
+asc\_coach-asc\_bus       &     0.00683 &        0.442 &   -5.05 & 4.42e-07 &      0.006 &        0.41 &        -5.04 &      4.69e-07 \\
+asc\_non\_motor-asc\_air   &    0.000541 &       0.0103 &   -2.86 &   0.0042 &   0.000293 &      0.0048 &        -2.45 &        0.0144 \\
+asc\_non\_motor-asc\_bus   &    0.000433 &       0.0317 &   -4.21 & 2.57e-05 &  -0.000122 &    -0.00979 &        -4.35 &      1.35e-05 \\
+asc\_non\_motor-asc\_coach &    0.000795 &       0.0251 &   0.334 &    0.738 &   -0.00111 &     -0.0376 &        0.334 &         0.738 \\
+asc\_rail-asc\_air        &     0.00139 &       0.0602 &  -0.784 &    0.433 &    0.00267 &      0.0919 &        -0.65 &         0.516 \\
+asc\_rail-asc\_bus        &     0.00366 &        0.613 & -0.0924 &    0.926 &    0.00347 &       0.585 &      -0.0902 &         0.928 \\
+asc\_rail-asc\_coach      &     0.00961 &        0.694 &    5.74 & 9.24e-09 &     0.0098 &       0.695 &         5.89 &      3.96e-09 \\
+asc\_rail-asc\_non\_motor  &    0.000366 &       0.0299 &    4.25 & 2.16e-05 &  -4.76e-05 &    -0.00396 &         4.36 &      1.32e-05 \\
+b\_gc-asc\_air            &    0.000699 &        0.112 &    5.72 & 1.06e-08 &    0.00428 &       0.389 &         4.79 &      1.66e-06 \\
+b\_gc-asc\_bus            &    0.000249 &        0.154 &    25.2 &      0.0 &   0.000462 &       0.206 &         26.2 &           0.0 \\
+b\_gc-asc\_coach          &     0.00115 &        0.306 &    15.7 &      0.0 &    0.00185 &       0.346 &         16.2 &           0.0 \\
+b\_gc-asc\_non\_motor      &    9.52e-05 &       0.0286 &    16.8 &      0.0 &   -0.00044 &     -0.0967 &         17.1 &           0.0 \\
+b\_gc-asc\_rail           &    0.000144 &        0.099 &    27.7 &      0.0 &   0.000179 &      0.0828 &         26.0 &           0.0 \\
+mu\_pt-asc\_air           &      0.0066 &       0.0498 &    9.24 &      0.0 &     0.0324 &        0.19 &         8.94 &           0.0 \\
+mu\_pt-asc\_bus           &      0.0132 &        0.385 &    12.6 &      0.0 &     0.0119 &       0.342 &         11.8 &           0.0 \\
+mu\_pt-asc\_coach         &      0.0624 &        0.784 &    19.7 &      0.0 &     0.0637 &       0.769 &         18.0 &           0.0 \\
+mu\_pt-asc\_non\_motor     &      0.0014 &         0.02 &    12.8 &      0.0 &   -0.00314 &     -0.0446 &         12.0 &           0.0 \\
+mu\_pt-asc\_rail          &        0.02 &        0.651 &    13.2 &      0.0 &     0.0227 &       0.675 &         12.6 &           0.0 \\
+mu\_pt-b\_gc              &     0.00297 &        0.356 &    7.11 & 1.15e-12 &    0.00472 &       0.372 &         6.77 &      1.27e-11 \\
 \bottomrule
 \end{tabular}
 %% This file is designed to be included into a LaTeX document
 %% See http://www.latex-project.org/ for information about LaTeX
-%% NL_Fz6 - Report from biogeme 3.2.6 [2021-06-25]
-%% biogeme 3.2.6 [2021-06-25]
+%% NL_Fz6 - Report from biogeme 3.2.6 [2021-07-09]
+%% biogeme 3.2.6 [2021-07-09]
 %% Version entirely written in Python
 %% Home page: http://biogeme.epfl.ch
 %% Submit questions to https://groups.google.com/d/forum/biogeme
 %% Michel Bierlaire, Transport and Mobility Laboratory, Ecole Polytechnique Fédérale de Lausanne (EPFL)
 
-%% This file has automatically been generated on 2021-06-25 14:42:25.468795</p>
+%% This file has automatically been generated on 2021-07-09 16:27:20.681337</p>
 
 %%Database name: MiD2017
 
@@ -354,23 +354,23 @@ Number of estimated parameters & 7 \\
 Sample size & 32635 \\
 Excluded observations & 52861 \\
 Init log likelihood & -63379.45 \\
-Final log likelihood & -12806.94 \\
-Likelihood ratio test for the init. model & 101145 \\
-Rho-square for the init. model & 0.798 \\
-Rho-square-bar for the init. model & 0.798 \\
-Akaike Information Criterion & 25627.87 \\
-Bayesian Information Criterion & 25686.62 \\
-Final gradient norm & 1.2393E-01 \\
+Final log likelihood & -11787.55 \\
+Likelihood ratio test for the init. model & 103183.8 \\
+Rho-square for the init. model & 0.814 \\
+Rho-square-bar for the init. model & 0.814 \\
+Akaike Information Criterion & 23589.09 \\
+Bayesian Information Criterion & 23647.85 \\
+Final gradient norm & 2.5875E-01 \\
 Nbr of threads & 8 \\
 Algorithm & \verb$BFGS with trust region for simple bound constraints$ \\
 Proportion analytical hessian & \verb$0.0%$ \\
-Relative projected gradient & \verb$3.221137e-06$ \\
-Number of iterations & \verb$53$ \\
-Number of function evaluations & \verb$156$ \\
-Number of gradient evaluations & \verb$52$ \\
+Relative projected gradient & \verb$3.751829e-06$ \\
+Number of iterations & \verb$55$ \\
+Number of function evaluations & \verb$164$ \\
+Number of gradient evaluations & \verb$55$ \\
 Number of hessian evaluations & \verb$0$ \\
-Cause of termination & \verb$Relative gradient = 3.2e-06 <= 6.1e-06$ \\
-Optimization time & \verb$0:01:26.207297$ \\
+Cause of termination & \verb$Relative gradient = 3.8e-06 <= 6.1e-06$ \\
+Optimization time & \verb$0:01:25.525295$ \\
 \end{tabular}
 
 %%Parameter estimates
@@ -379,13 +379,13 @@ Optimization time & \verb$0:01:26.207297$ \\
 \toprule
 {} &  Value &  Std err &  t-test &  p-value &  Rob. Std err &  Rob. t-test &  Rob. p-value \\
 \midrule
-asc\_air       &  -3.11 &    0.411 &   -7.56 & 4.06e-14 &         0.524 &        -5.93 &      2.94e-09 \\
-asc\_bus       &  -3.35 &   0.0475 &   -70.6 &      0.0 &         0.055 &        -61.0 &           0.0 \\
-asc\_coach     &  -3.75 &   0.0946 &   -39.6 &      0.0 &           0.1 &        -37.4 &           0.0 \\
-asc\_non\_motor &  -2.14 &   0.0397 &   -53.8 &      0.0 &        0.0375 &        -56.9 &           0.0 \\
-asc\_rail      &  -2.58 &   0.0342 &   -75.3 &      0.0 &        0.0345 &        -74.6 &           0.0 \\
-b\_gc          & -0.267 &  0.00791 &   -33.7 &      0.0 &        0.0112 &        -23.8 &           0.0 \\
-mu\_pt         &   1.26 &   0.0433 &    29.2 &      0.0 &         0.047 &         26.9 &           0.0 \\
+asc\_air       &  -3.36 &    0.426 &   -7.88 & 3.11e-15 &         0.582 &        -5.77 &      7.82e-09 \\
+asc\_bus       &  -2.29 &    0.034 &   -67.5 &      0.0 &        0.0342 &        -67.0 &           0.0 \\
+asc\_coach     &  -3.44 &   0.0761 &   -45.2 &      0.0 &         0.083 &        -41.4 &           0.0 \\
+asc\_non\_motor &  -2.27 &   0.0418 &   -54.2 &      0.0 &        0.0416 &        -54.5 &           0.0 \\
+asc\_rail      &  -2.38 &    0.033 &   -72.3 &      0.0 &        0.0349 &        -68.2 &           0.0 \\
+b\_gc          & -0.335 &  0.00956 &   -35.0 &      0.0 &        0.0163 &        -20.5 &           0.0 \\
+mu\_pt         &   1.77 &   0.0755 &    23.5 &      0.0 &        0.0841 &         21.1 &           0.0 \\
 \bottomrule
 \end{tabular}
 
@@ -395,26 +395,26 @@ mu\_pt         &   1.26 &   0.0433 &    29.2 &      0.0 &         0.047 &       
 \toprule
 {} &  Covariance &  Correlation &  t-test &  p-value &  Rob. cov. &  Rob. corr. &  Rob. t-test &  Rob. p-value \\
 \midrule
-asc\_bus-asc\_air         &     0.00042 &       0.0215 &  -0.585 &    0.558 &     0.0082 &       0.285 &       -0.473 &         0.636 \\
-asc\_coach-asc\_air       &    0.000605 &       0.0155 &   -1.52 &    0.128 &     0.0105 &       0.201 &        -1.25 &         0.212 \\
-asc\_coach-asc\_bus       &     0.00214 &        0.477 &    -4.8 & 1.62e-06 &    0.00308 &       0.559 &         -4.8 &       1.6e-06 \\
-asc\_non\_motor-asc\_air   &     0.00014 &      0.00856 &    2.36 &   0.0183 &    0.00217 &        0.11 &         1.87 &        0.0615 \\
-asc\_non\_motor-asc\_bus   &    0.000195 &        0.104 &    20.7 &      0.0 &   8.53e-05 &      0.0414 &         18.6 &           0.0 \\
-asc\_non\_motor-asc\_coach &    0.000251 &       0.0668 &    16.1 &      0.0 &   0.000129 &      0.0343 &         15.3 &           0.0 \\
-asc\_rail-asc\_air        &    0.000215 &       0.0153 &    1.29 &    0.195 &    0.00239 &       0.132 &         1.03 &         0.305 \\
-asc\_rail-asc\_bus        &    0.000896 &        0.552 &    19.2 &      0.0 &    0.00115 &       0.608 &         17.8 &           0.0 \\
-asc\_rail-asc\_coach      &      0.0017 &        0.524 &    14.3 &      0.0 &      0.002 &       0.576 &         13.8 &           0.0 \\
-asc\_rail-asc\_non\_motor  &    9.55e-05 &       0.0703 &   -8.72 &      0.0 &   2.12e-05 &      0.0163 &        -8.71 &           0.0 \\
-b\_gc-asc\_air            &    9.82e-05 &       0.0302 &    6.91 & 4.72e-12 &    0.00271 &       0.462 &         5.48 &      4.27e-08 \\
-b\_gc-asc\_bus            &    0.000187 &        0.499 &    70.0 &      0.0 &   0.000365 &       0.595 &         62.8 &           0.0 \\
-b\_gc-asc\_coach          &    0.000242 &        0.324 &    37.7 &      0.0 &    0.00047 &       0.419 &         36.3 &           0.0 \\
-b\_gc-asc\_non\_motor      &    5.02e-05 &         0.16 &    47.7 &      0.0 &   5.18e-05 &       0.123 &         49.5 &           0.0 \\
-b\_gc-asc\_rail           &    5.92e-05 &        0.219 &    69.1 &      0.0 &   0.000126 &       0.327 &         70.7 &           0.0 \\
-mu\_pt-asc\_air           &    0.000354 &       0.0199 &    10.6 &      0.0 &    0.00846 &       0.344 &         8.58 &           0.0 \\
-mu\_pt-asc\_bus           &     0.00135 &        0.657 &   122.0 &      0.0 &     0.0019 &       0.735 &        122.0 &           0.0 \\
-mu\_pt-asc\_coach         &     0.00264 &        0.645 &    67.4 &      0.0 &    0.00328 &       0.697 &         66.5 &           0.0 \\
-mu\_pt-asc\_non\_motor     &    0.000175 &        0.102 &    61.1 &      0.0 &     0.0001 &      0.0567 &         58.2 &           0.0 \\
-mu\_pt-asc\_rail          &       0.001 &        0.678 &   119.0 &      0.0 &    0.00115 &       0.708 &        116.0 &           0.0 \\
-mu\_pt-b\_gc              &    0.000196 &        0.572 &    39.0 &      0.0 &   0.000349 &       0.665 &         37.9 &           0.0 \\
+asc\_bus-asc\_air         &    0.000235 &       0.0162 &     2.5 &   0.0126 &    0.00284 &       0.143 &         1.84 &        0.0654 \\
+asc\_coach-asc\_air       &    0.000839 &       0.0259 &  -0.179 &    0.858 &     0.0111 &       0.231 &       -0.136 &         0.892 \\
+asc\_coach-asc\_bus       &    0.000781 &        0.302 &   -15.6 &      0.0 &    0.00101 &       0.357 &        -14.7 &           0.0 \\
+asc\_non\_motor-asc\_air   &    0.000345 &       0.0194 &    2.56 &   0.0104 &    0.00543 &       0.224 &         1.91 &        0.0565 \\
+asc\_non\_motor-asc\_bus   &    0.000104 &       0.0734 &   0.572 &    0.567 &   0.000111 &       0.078 &        0.574 &         0.566 \\
+asc\_non\_motor-asc\_coach &    0.000298 &       0.0938 &    14.1 &      0.0 &   0.000463 &       0.134 &         13.4 &           0.0 \\
+asc\_rail-asc\_air        &    0.000189 &       0.0135 &    2.29 &   0.0219 &    0.00101 &      0.0496 &         1.68 &        0.0924 \\
+asc\_rail-asc\_bus        &    0.000497 &        0.443 &   -2.47 &   0.0137 &    0.00058 &       0.485 &        -2.48 &        0.0131 \\
+asc\_rail-asc\_coach      &     0.00142 &        0.567 &    16.6 &      0.0 &    0.00162 &       0.557 &         15.1 &           0.0 \\
+asc\_rail-asc\_non\_motor  &    7.76e-05 &       0.0563 &   -2.26 &    0.024 &   1.14e-05 &     0.00788 &        -2.16 &        0.0308 \\
+b\_gc-asc\_air            &    0.000264 &       0.0647 &    7.11 & 1.19e-12 &    0.00483 &       0.508 &         5.27 &      1.36e-07 \\
+b\_gc-asc\_bus            &     5.5e-05 &        0.169 &    58.1 &      0.0 &   0.000127 &       0.227 &         56.9 &           0.0 \\
+b\_gc-asc\_coach          &     0.00021 &        0.289 &    42.0 &      0.0 &   0.000457 &       0.337 &         39.3 &           0.0 \\
+b\_gc-asc\_non\_motor      &    0.000104 &         0.26 &    47.8 &      0.0 &   0.000276 &       0.406 &         50.8 &           0.0 \\
+b\_gc-asc\_rail           &    2.34e-05 &       0.0742 &    60.9 &      0.0 &   1.69e-05 &      0.0297 &         53.7 &           0.0 \\
+mu\_pt-asc\_air           &    0.000917 &       0.0285 &    11.9 &      0.0 &     0.0149 &       0.304 &         9.13 &           0.0 \\
+mu\_pt-asc\_bus           &    0.000752 &        0.293 &    55.7 &      0.0 &    0.00108 &       0.375 &         52.2 &           0.0 \\
+mu\_pt-asc\_coach         &     0.00359 &        0.626 &    79.5 &      0.0 &    0.00441 &       0.632 &         72.7 &           0.0 \\
+mu\_pt-asc\_non\_motor     &    0.000361 &        0.115 &    49.3 &      0.0 &    0.00054 &       0.154 &         46.0 &           0.0 \\
+mu\_pt-asc\_rail          &     0.00164 &         0.66 &    70.3 &      0.0 &    0.00205 &       0.697 &         64.2 &           0.0 \\
+mu\_pt-b\_gc              &    0.000287 &        0.397 &    29.2 &      0.0 &    0.00053 &       0.385 &         26.6 &           0.0 \\
 \bottomrule
 \end{tabular}
