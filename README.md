@@ -21,9 +21,10 @@ While input and output data as well as (temporary) model files are stored in sep
 * ``prep2X``: Aggregation of PT network graph and connection to transport demand sources and sinks. You can either cluster stops and connect the clusters to zone centroids or connect centroids to certain stops first and then aggregate the rest
 * ``prep3X``: Calculation of shortest paths and enrichment with performance attributes for PT and cars, respectively
 * ``calX``: Generation of calibration dataset and estimation of parameters (only applicable with access to calibration data (see below))
-* ``model_volumes``: Generation of OD matrix (steps trip generation and distribution together)
+* ``model_volumes``: Generation of OD matrix (steps trip generation and distribution together; only applicable with access to volume data (see below))
 * ``model_logit``: Mode choice
 * ``model_assignment``: Route assignment
+* ``model_emissions``: Calculation of emissions from German passenger transport (post-processing; only applicable with access to inner-zone data (see below))
 * ``valX``: Validation of the mode choice model results
 
 ## Usage
@@ -33,7 +34,7 @@ While input and output data as well as (temporary) model files are stored in sep
 1. Create a virtual environment for quetzal models: Clone the quetzal package into a local folder and create a virtual environment as described here *[1]*: https://github.com/systragroup/quetzal
 2. Activate your quetzal environment, if not done yet
 3. Clone this repository into a local folder: In your terminal, navigate to the position where you want to store the code. Type `git clone <this repo's URL>`. Navigate into the folder `quetzal_germany`.
-4. Download static input files from Zenodo *[2]* into a folder named `input_static/` within the `quetzal_germany` repository: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4740207.svg)](https://doi.org/10.5281/zenodo.4740207)
+4. Download static input files from Zenodo *[2]* into a folder named `input_static/` within the `quetzal_germany` repository (see Structure): [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4740207.svg)](https://doi.org/10.5281/zenodo.4740207)
 5. Open the local project in Jupyter Notebook (in your terminal type `jupyter notebook`) and start running the notebooks
 
 *[1]*: If you face problems importing geopandas, consider uninstalling package `rtree` and reinstalling a version up to 0.9.3 (`conda install -c conda-forge rtree=0.9.3`) or uninstalling the whole environment and reinstalling it with the requirements file posted in this [issue](https://github.com/systragroup/quetzal/issues/45).
@@ -41,11 +42,11 @@ While input and output data as well as (temporary) model files are stored in sep
 
 ### First model run
 
-You can run the whole model by executing all notebooks in the order stated under Structure. However, the repository comes with transport networks but without level-of-service (LoS) attributes assigned to origin-destination (OD) relations. This is because LoS attribution is strongly assumption-driven and the LoS shortest path table is too large to be hosted online efficiently. Thus, you only need to create LoS tables for road and PT connections by running all `prep3X` notebooks and adjusting the assumptions made, if needed. However, adjustments to LoS attributes must be consistent with assumptions made for calibration data (`calX` notebooks).
+This repository (together with static input data) contains road and public transport (incl. air) networks, aggregated networks, and estimation results for the choice model. Thus, you can simply execute all `prep3X` notebooks to generate the level-of-service (LoS)-shortest-paths-stack and then run the model notebooks in order of classic transport modelling (generation, distribution, mode choice, assignment). You can adjust network-related assumptions in the `prep30` notebooks, if you want to simulate an alternative transport system. 
 
-Your StepModel object (always abbreviated with `sm`) is where the magic happens. It saves all tables as attributes (pandas `DataFrame`s) and provides all transport modelling specific functions from the quetzal library. Quetzal provides wrapper function for classic steps in aggregated transport modelling (trip generation, assignment, etc.), which execute a set of more specific functions. Due to a higher degree of customisation, this model mostly uses quetzal's specific functions in many places.
+Detailed descriptions what the notebooks do are to be found as comments. Your StepModel object (always abbreviated with `sm`) is where the magic happens. It saves all tables as attributes (pandas `DataFrame`s) and provides all transport modelling specific functions from the quetzal library. Quetzal provides wrapper function for classic steps in aggregated transport modelling (trip generation, assignment, etc.), which execute a set of more specific functions. Due to a higher degree of customisation, this model mostly uses quetzal's specific functions in many places.
 
-After creating LoS tables you are able to run the four step model (`model_X` notebooks in classic order). If you don't have access to travel demand data (see below), you can only run `model_logit` - mode choice. This will output mode choice probabilities, which you can then visualise using the `valX` notebooks.
+If you don't have access to travel demand data (see below), you can only run `prepX` notebooks and `model_logit` - mode choice. This will output mode choice probabilities, which you can then visualise using the `val1X` notebooks.
 
 ### Example for custom region (or new generation of networks)
 
@@ -58,7 +59,7 @@ Notebooks `prep2X` aggregate yor network and create access/egress links between 
 * Creating access/egress links first and then removing unused links (takes longer and yields a larger network)
 The notebooks are named correspondingly. `prep22` corrects lengths of PT links, which are computed as geodesic distance and which are important for fares calculation.
 
-The rest works straight-forward with the notebooks' comments and should work for every self-defined region. At the end of each notebook in the 'save' cell(s) you find all DataFrames (as `sm`'s attributes) that will be relevant in later steps. One additional attribute is always present: `sm.epsg` which defines the coordinate reference system.
+The rest works straight-forward with the notebooks' comments and should work for every self-defined region with minor adjustments. At the end of each notebook in the 'save' cell(s) you find all DataFrames (as `sm`'s attributes) that will be relevant in later steps. One additional attribute is always present: `sm.epsg` which defines the coordinate reference system.
 
 ### Results
 
@@ -72,5 +73,5 @@ Though, for estimating calibration parameters (beyond the estimation results giv
 * Calibration uses a large national survey of mobility behaviour "[Mobilität in Deutschland 2017](http://www.mobilitaet-in-deutschland.de/) B2" (MiD2017)
 * Assignment uses modified origin destination matrices from the underlying model of the German federal governments transport study "[Bundesverkehrswegeplan 2030](https://www.bmvi.de/SharedDocs/DE/Artikel/G/BVWP/bundesverkehrswegeplan-2030-inhalte-herunterladen.html)"
 
-You can apply for access to both data sets using the national [Clearing House Transport order form](https://daten.clearingstelle-verkehr.de/order-form.html)
+You can apply for access to both data sets using the national [Clearing House Transport order form](https://daten.clearingstelle-verkehr.de/order-form.html) . All `csv` and `xlsx` data tables go into the folder `input/transport_demand`, which added to the `.gitignore`.
 
