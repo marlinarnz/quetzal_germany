@@ -4,7 +4,6 @@ model/*assign*
 model/*los*
 model/*volumes*
 model/*logit*
-model/de_pt_network_bus/links.geojson
 output/
 input_static/
 input/transport_demand/
