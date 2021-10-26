@@ -1,9 +1,9 @@
 # quetzal_germany
-This open source project is a macroscopic transport model for the region of Germany. It supports research aimed at designing an integrated, renewable energy system with mobility behaviour insights.
+This open source project is a macroscopic passenger transport model for the region of Germany. It supports research aimed at designing an integrated, renewable energy system with mobility behaviour insights.
 
 It uses the quetzal transport modelling framework: https://github.com/systragroup/quetzal
 
-The method is oriented towards classical four-step transport modelling. Focus lies on mode choice by using a purpose-segmented nested logit model.
+The method is oriented towards classical four-step transport modelling. Focus lies on mode choice by using a purpose-segmented logit model.
 
 ## Structure
 
@@ -25,6 +25,9 @@ While input and output data as well as (temporary) model files are stored in sep
 * ``model_logit``: Mode choice
 * ``model_assignment``: Route assignment and results validation
 * ``model_emissions``: Calculation of emissions from German passenger transport (post-processing; only applicable with access to inner-zone data (see below))
+* ``00_launcher``: Automatically runs all preparation and modelling steps in order
+
+All assumptions and scenario parameters are saved in the `input/parameters.xls` file.
 
 ## Usage
 
@@ -41,9 +44,9 @@ While input and output data as well as (temporary) model files are stored in sep
 
 ### First model run
 
-This repository (together with static input data) contains road and public transport (incl. air) networks, aggregated networks, and estimation results for the choice model. Thus, you can simply execute all `prep3X` notebooks to generate the level-of-service (LoS)-shortest-paths-stack and then run the model notebooks in order of classic transport modelling (generation, distribution, mode choice, assignment). You can adjust network-related assumptions in the `prep30` notebooks, if you want to simulate an alternative transport system. 
+This repository (together with static input data) contains road and public transport (incl. air) networks, aggregated networks, and estimation results for the mode choice model. Thus, you can simply execute all `prep3X` notebooks from the `00_launcher` notebook in order to generate the level-of-service (LoS)-shortest-paths-stack and then run the classic transport modelling steps (generation, distribution, mode choice, assignment). You can adjust all assumptions in the `parameters.xls` file, if you want to simulate an alternative transport system.
 
-Detailed descriptions what the notebooks do are to be found as comments. Your StepModel object (always abbreviated with `sm`) is where the magic happens. It saves all tables as attributes (pandas `DataFrame`s) and provides all transport modelling specific functions from the quetzal library. Quetzal provides wrapper function for classic steps in aggregated transport modelling (trip generation, assignment, etc.), which execute a set of more specific functions. Due to a higher degree of customisation, this model mostly uses quetzal's specific functions in many places.
+Detailed descriptions what the notebooks do are to be found as comments. Your StepModel object (always abbreviated with `sm`) is where the magic happens. It saves all tables as attributes (pandas `DataFrame`s) and provides all transport modelling specific functions from the quetzal library. Quetzal provides wrapper function for classic steps in aggregated transport modelling (trip generation, assignment, etc.), which execute a set of more specific functions. Due to a higher degree of customisation, this model uses quetzal's specific functions in many places.
 
 If you don't have access to travel demand data (see below), you can only run `prepX` notebooks and `model_logit` - mode choice.
 
