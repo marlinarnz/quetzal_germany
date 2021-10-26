@@ -39,6 +39,8 @@ All assumptions and scenario parameters are saved in the `input/parameters.xls` 
 4. Download static input files from Zenodo *[2]* into a folder named `input_static/` within the `quetzal_germany` repository (see Structure): [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5159308.svg)](https://doi.org/10.5281/zenodo.5159308)
 5. Open the local project in Jupyter Notebook (in your terminal type `jupyter notebook`) and start running the notebooks
 
+You can test your virtual environment by running the `00_test_environment` notebook.
+
 *[1]*: If you face problems importing geopandas, consider uninstalling package `rtree` and reinstalling a version up to 0.9.3 (`conda install -c conda-forge rtree=0.9.3`) or uninstalling the whole environment and reinstalling it with the requirements file posted in this [issue](https://github.com/systragroup/quetzal/issues/45).
 *[2]*: If you wonder why these files are not hosted in this very repository: Large input data files require different handling and some of them also require a license different to this repo's licensing.
 
