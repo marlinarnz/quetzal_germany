@@ -18,7 +18,7 @@ The directory structure is straight-forward:
 
 While input and output data as well as (temporary) model files are stored in seperate folders, Jupyter Notebooks contain all data management and modelling. Briefly, they are structured as follows (`X` as wildcard):
 * ``prep1X``: Generation of transport demand zones and all transport networks in high resolution
-* ``prep2X``: Aggregation of PT network graph and connection to transport demand sources and sinks. You can either cluster stops and connect the clusters to zone centroids or aggregate the PT network to relevant trips and stops
+* ``prep2X``: Aggregation of PT network graph and connection to transport demand sources and sinks
 * ``prep3X``: Calculation of shortest paths and enrichment with performance attributes for PT and cars, respectively
 * ``calX``: Generation of calibration dataset and estimation of parameters (only applicable with access to calibration data (see below))
 * ``model_volumes``: Generation of OD matrix (steps trip generation and distribution together; only applicable with access to volume data (see below))
@@ -26,8 +26,9 @@ While input and output data as well as (temporary) model files are stored in sep
 * ``model_assignment``: Route assignment and results validation
 * ``model_emissions``: Calculation of emissions from German passenger transport (post-processing; only applicable with access to inner-zone data (see below))
 * ``00_launcher``: Automatically runs all preparation and modelling steps in order
+* ``00_test_environment``: Run it to see whether your virtual environment is properly set up
 
-All assumptions and scenario parameters are saved in the `input/parameters.xls` file.
+All scenario parameters are saved in the `input/parameters.xls` file.
 
 ## Usage
 
@@ -58,17 +59,22 @@ Notebook `prep10` creates the four step model (`sm`) with a zones table that you
 
 Notebooks `prep11` to `prep14` create road and PT networks from OpenStreetMap and German-wide GTFS feeds, respectively. They will be saved in `sm.road_links`/`sm.road_nodes` and `sm.links`/`sm.nodes`, respectively. Additionally, a list `sm.pt_route_types` is created. Make sure you uncomment the cell where you spatially restrict the network graph, if you want a smaller region. Notebook `prep15` creates distances from all population points in the latest census to your PT stops (make sure to spatially restrict this one too). This data is used to parametrise PT access and egress links.
 
-Notebooks `prep2X` aggregate yor network and create access/egress links between zones' demand centroids and the PT stops or road nodes, respectively. There are two methods available for PT network aggregation, which is necessary in order to reduce computation time for path finders and all other methods:
-* Clustering short-distance stops and then creating access/egress links (efficient computation, but information loss in network connectivity and travel time)
+Notebooks `prep2X` aggregate yor network and create access/egress links between zones' demand centroids and the PT stops or road nodes, respectively. There are two methods used for PT network aggregation, which is necessary in order to reduce computation time for path finders and all other methods:
+* Clustering short-distance stops
 * Aggregation of PT network to relevant trips and stops with simultaneous connection to zone centroids (size and quality of the network depend on your definition of 'relevant')
-
-The notebooks are named correspondingly (`prep20` and `prep21`).
+* Subsequently, the road network gets connected
 
 The rest works straight-forward with the notebooks' comments and should work for every self-defined region with minor adjustments. At the end of each notebook in the 'save' cell(s) you find all DataFrames (as `sm`'s attributes) that will be relevant in later steps. One additional attribute is always present: `sm.epsg` which defines the coordinate reference system.
 
 ### Results
 
 Results of the inter-zonal model (NUTS3 resolution) are computed and validated in `model_assignment`, while results for whole Germany need inner-zonal traffic as well. This is computed under use of restrictively licensed data (see below; notebook `model_assignment_inner-zonal`). Combined results, which are eligible for comparison to other studies, are created in `model_emissions`.
+
+### Scenarios
+
+You can define own scenarios "the quetzal way": Open the `parameters.xls` file and add a new column with your scenario name. Name it under "general/description" and refer to "base" as a "general/parent" scenario. All values, which you don't change in your new column are taken from the parent column.
+
+You can now adjust parameters and run the model with new values. To do so, either use the `00_launcher` by typing your scenario name (column name in `parameters.xls`) in the list of scenarios (fourth cell). All scenario names in this list will be executed in parallel. The other option is running the notebooks manually and defining the variable `scenario` to your name (see very first cell).
 
 ### Data accessibility
 
