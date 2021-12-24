@@ -1,11 +1,8 @@
 Archive/
+destination_choice/
 notebooks/.ipynb*
 notebooks/log/
-model/*assign*
-model/*los*
-model/*volumes*
-model/*logit*
-model/de_pt_network_ancillary/node_parenthood.geojson
+model/
 output/
 input_static/
 input/transport_demand/
