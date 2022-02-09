@@ -7,7 +7,7 @@ The method is oriented towards classical four-step transport modelling. Focus li
 
 ## Structure
 
-![Structure of quetzal_germany](input/quetzal_germany_structure_chart.pdf "Structure of quetzal_germany")
+![Structure of quetzal_germany](input/quetzal_germany_structure_chart.PNG "Structure of quetzal_germany")
 
 The directory structure is straight-forward:
 > quetzal_germany/</br>
