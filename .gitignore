@@ -3,6 +3,11 @@ destination_choice/
 notebooks/.ipynb*
 notebooks/log/
 model/
+!model/base/de_zones/
+!model/base/de_pt_network_agg/
+!model/base/de_pt_network_ancillary/
+!model/base/de_pt_access_egress/
+!model/base/de_road_access_egress/
 output/
 input_static/
 input/transport_demand/
