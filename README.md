@@ -14,7 +14,11 @@ The directory structure is straight-forward:
 > -- input/</br>
 > -- input_static/</br>
 > -- model/</br>
+> ---- base/</br>
+> ---- scenarioX/</br>
 > -- output/</br>
+> ---- base/</br>
+> ---- scenarioX/</br>
 
 While input and output data as well as (temporary) model files are stored in seperate folders, Jupyter Notebooks contain all data management and modelling. Briefly, they are structured as follows (`X` as wildcard):
 * ``prep1X``: Generation of transport demand zones and all transport networks in high resolution
@@ -48,6 +52,8 @@ You can test your virtual environment by running the `00_test_environment` noteb
 ### First model run
 
 This repository (together with static input data) contains road and public transport (incl. air) networks, aggregated networks, and estimation results for the mode choice model. Thus, you can simply execute all `prep3X` notebooks from the `00_launcher` notebook in order to generate the level-of-service (LoS)-shortest-paths-stack and then run the classic transport modelling steps (generation, distribution, mode choice, assignment). You can adjust all assumptions in the `parameters.xls` file, if you want to simulate an alternative transport system.
+
+Note: If you want to run the model on a laptop with at least 8GB RAM, you should use the NUTS3-level zoning system. Read the cooresponding section in `00_launcher`. Otherwise, you'll need 150GB RAM.
 
 Detailed descriptions what the notebooks do are to be found as comments. Your StepModel object (always abbreviated with `sm`) is where the magic happens. It saves all tables as attributes (pandas `DataFrame`s) and provides all transport modelling specific functions from the quetzal library. Quetzal provides wrapper function for classic steps in aggregated transport modelling (trip generation, assignment, etc.), which execute a set of more specific functions. Due to a higher degree of customisation, this model uses quetzal's specific functions in many places.
 
