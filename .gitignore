@@ -8,6 +8,7 @@ model/base/*assign*/
 model/base/*logit*/
 model/base/*los*/
 model/base/*volume*/
+model/base/*destination*/
 model/base_NUTS3/
 output/
 input_static/
