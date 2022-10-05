@@ -1,5 +1,5 @@
 # quetzal_germany
-This open source project is a macroscopic passenger transport model for the region of Germany. It supports research aimed at designing an integrated, renewable energy system with mobility behaviour insights.
+This open source project is a macroscopic passenger transport model for the region of Germany. It supports research aimed at designing an integrated, renewable energy system with mobility behaviour insights. The reference publication can be found here: https://doi.org/10.1186/s12544-022-00568-9
 
 It uses the quetzal transport modelling framework: https://github.com/systragroup/quetzal
 
