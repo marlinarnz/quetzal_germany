@@ -33,9 +33,11 @@ While input and output data as well as (temporary) model files are stored in sep
 * ``model_volumes_X``: Generation of OD matrix either from exogenous data (VP2030) or endogenously from previous steps
 * ``model_mode``: Mode choice and calculation of composite cost for generation and destination choice
 * ``model_assignment``: Route assignment and results validation
+* ``model_inner-zonal``: Calculation of transport system indicators for inner-zonal traffic
 * ``post_X``: Calculation of emissions or energy demand for the entire passenger transport sector
 * ``00_launcher``: Automatically runs all preparation and modelling steps in order
 * ``00_test_environment``: Run it to see whether your virtual environment is properly set up
+* ``val_X``: Various validation notebooks for model results
 
 All scenario parameters are saved in the `input/parameters.xls` file. Other mallable input files are located in the same folder, while unchanged input data sits in `input_static/`.
 
