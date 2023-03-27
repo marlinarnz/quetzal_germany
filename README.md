@@ -6,7 +6,7 @@ It uses the quetzal transport modelling framework: https://github.com/systragrou
 
 ## Structure
 
-The method is oriented towards classical four-step transport modelling.
+The method is oriented towards classical four-step transport modelling with emphasis on the demand side.
 
 ![Structure of quetzal_germany](input/quetzal_germany_structure_chart.PNG "Structure of quetzal_germany")
 
