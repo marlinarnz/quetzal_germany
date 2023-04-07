@@ -1,9 +1,8 @@
 Archive/
-destination_choice/
+car_ownership/
 notebooks/.ipynb*
 notebooks/log/
 model/2035_base/
-model/base_ML/
 model/base/*assign*/
 model/base/*logit*/
 model/base/*los*/

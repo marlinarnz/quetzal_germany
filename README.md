@@ -56,6 +56,7 @@ All scenario parameters are saved in the `input/parameters.xls` file. Other mall
 3. Clone this repository into a local folder: In your terminal, navigate to the position where you want to store the code. Type `git clone <this repo's URL>`. Navigate into the folder `quetzal_germany`.
 4. Download static input files from Zenodo[^2] into a folder named `input_static/` within the `quetzal_germany` repository (see directory structure): [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4518680.svg)](https://doi.org/10.5281/zenodo.4518680)
 5. Open the local project in Jupyter Notebook (in your terminal type `jupyter notebook`) and start running the notebooks
+6. *OPTIONAL* Install the car ownership module: Download the module from Zenodo into a folder named `car_ownership`, just like done with `input_static/`: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7809061.svg)](https://doi.org/10.5281/zenodo.7809061)
 
 You can test your virtual environment by running the `00_test_environment` notebook. Read potential error messages and install concerning packages using conda, or refer to the [quetzal issues](https://github.com/systragroup/quetzal/issues) page to see if this error has occured before.
 
@@ -85,6 +86,8 @@ Some relevant results are aggregated numbers that are printed in the correspondi
 You can define own scenarios "the quetzal way": Open the `parameters.xls` file and add a new column with your scenario name. Name it under "general/description" and refer to "base" as a "general/parent" scenario. All values, which you don't change in your new column are taken from the parent column.
 
 You can now adjust parameters and run the model with new values. To do so, either use the `00_launcher` by typing your scenario name (column name in `parameters.xls`) in the list of scenarios (fourth cell). All scenario names in this list will be executed in parallel. The other option is running the notebooks manually and defining the variable `scenario` to your name (very first cell).
+
+If you installed the car ownership module, you can compute changed car availabilities by running the correspondingly named notebook from the launcher (or manually). Further details are given in the notebook and in the Readme of the car ownership module.
 
 ## Network generation and example for custom region
 
