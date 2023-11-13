@@ -49,7 +49,7 @@ All scenario parameters are saved in the `input/parameters.xls` file. Other mall
    + Or create a virtual environment manually with all dependencies using conda:
      * Create an environment with the desired python version, e.g.: `conda create -n quetzal python=3.10`
 	 * Activate this environemnt (`conda activate quetzal`)
-	 * Install neccesary dependencies: `conda install -c conda-forge geopandas contextily osmnx geopy rtree notebook matplotlib xlsxwriter cython numba scikit-learn scipy xlrd tqdm ray-default pytables sqlalchemy openpyxl==3.0.7`
+	 * Install neccesary dependencies: `conda install -c conda-forge pandas<2.0 geopandas contextily osmnx geopy rtree notebook matplotlib xlsxwriter cython numba scikit-learn scipy xlrd tqdm ray-default pytables sqlalchemy openpyxl==3.0.7`
 	 * Install quetzal dependencies that are not available on conda for python > 3.6: `pip install simpledbf biogeme`
 	 * Clone the quetzal repository to a desired location (`git clone https://github.com/systragroup/quetzal`) and install it as development version `pip install -e quetzal/`
 2. Activate your quetzal environment, if not done yet
