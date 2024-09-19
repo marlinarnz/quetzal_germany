@@ -2,6 +2,7 @@ Archive/
 car_ownership/
 notebooks/.ipynb*
 notebooks/log/
+notebooks/biogeme.toml
 model/2035_base/
 model/base/*assign*/
 model/base/*logit*/
